@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator */
+
+.calculator {
+    width: 340px;
+    margin-inline: auto;
+    height: auto;
+
+    margin-block: 2rem;
+    padding: 1.65rem;
+
+    background: #4a4a4a;
+    border-radius: 4px;
+}
+
+.output {
+    width: 100%;
+    height: 75px;
+
+    background: #d0e6a8;
+    border-radius: 3px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+
+    margin-top: 2rem;
+}
+
+.buttons div {
+    aspect-ratio: 1 / 1;
+    background: #808080;
+
+    display: grid;
+    place-items: center;
+    font-size: 2.15rem;
+    color: white;
+    cursor: pointer;
+
+    border-radius: 3px;
+}
+
+.buttons div:hover {
+    background: #8e8e8e;
+}
+
+.buttons div:nth-child(4n),
+.buttons div:nth-child(15) {
+    background: #67ced7;
+    font-weight: bolder;
+    font-size: 2.75rem;
+}
+
+.buttons div:nth-child(4n):hover,
+.buttons div:nth-child(15):hover {
+    background: #75dae4;
+}
+
+.buttons div:nth-child(14),
+.buttons div:nth-child(16) {
+    aspect-ratio: auto;
+}
+
+.buttons div:nth-child(14) {
+    grid-column: span 2;
+}
+
+.buttons div:nth-child(16) {
+    background: #e95d5e;
+    font-size: 2.75rem;
+    grid-column: span 4;
+}
+
+.buttons div:nth-child(16):hover {
+    background: #f46d6d;
+}
